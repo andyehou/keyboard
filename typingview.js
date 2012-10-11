@@ -73,23 +73,24 @@ TypingView.prototype.onKeyTapEvent_ = function(event) {
   }
 
   var keyString = event.getString();
+  var text = this.typingElement_.innerHTML;
 
   // Check for special keys.
   if (keyString == 'Backspace') {
-    if (this.typingElement_.innerHTML.length > 0) {
-      this.typingElement_.innerHTML = this.typingElement_.innerHTML.substring(
-          0, this.typingElement_.innerHTML.length - 1);
+    if (text.length > 0) {
+      text = text.substring(0, text.length - 1);
     }
-    return;
   } else if (keyString == 'Space') {
-    this.typingElement_.innerHTML += ' ';
+    text += ' ';
   } else if (keyString == 'Tab') {
-    this.typingElement_.innerHTML += '\t';
+    text += '\t';
   } else if (keyString == 'Enter') {
-    this.typingElement_.innerHTML += '\n';
+    text += '\n';
   } else if (keyString.length > 1) {
     // Ignore.
   } else {
-    this.typingElement_.innerHTML += keyString;
+    text += keyString;
   }
+
+  this.typingElement_.innerHTML = text;
 };
