@@ -87,11 +87,6 @@ KeyHook.prototype.onKeyboardEvent_ = function(e) {
   var modifiersMask = selfObj.getModifiersMask_(e);
   var keyIds = selfObj.inputLayout_.getPhysicalKeyIds(keyCode);
 
-    // Logging.
-  if (e.type == 'keydown') {
-    console.log('keyCode = ' + keyCode + ', modifiers = ' + modifiersMask);
-  }
-
   // Filter out keycodes that do not correspond to a physical key on our
   // keyboard layout.
   if (keyIds.length == 0) {
