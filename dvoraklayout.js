@@ -6,18 +6,44 @@ DvorakLayout = {};
 
 
 /**
- * A mapping from physical key id (modifiers have no effect) to browser key
- * code.
+ * A mapping from physical key id (modifiers have no effect) to non-Firefox
+ * browser key code.
  * @type {Array.<number>}
  * @private
  */
-DvorakLayout.idToKeyCode_ = [
+DvorakLayout.defaultIdToKeyCode_ = [
     192,  49,  50,  51,  52,  53,  54,  55,  56,  57,  48, 219, 221,   8,
       9, 222, 188, 190,  80,  89,  70,  71,  67,  82,  76, 191, 187, 220,
      20,  65,  79,  69,  85,  73,  68,  72,  84,  78,  83, 189,  13,
      16, 186,  81,  74,  75,  88,  66,  77,  87,  86,  90,  16,
      17,  91,  18,  32,  18,  92,  93,  17
 ];
+
+
+/**
+ * A mapping from physical key id (modifiers have no effect) to Firefox browser
+ * key code.
+ * @type {Array.<number>}
+ * @private
+ */
+DvorakLayout.firefoxIdToKeyCode_ = [
+    192,  49,  50,  51,  52,  53,  54,  55,  56,  57,  48, 219, 221,   8,
+      9, 222, 188, 190,  80,  89,  70,  71,  67,  82,  76, 191,  61, 220,
+     20,  65,  79,  69,  85,  73,  68,  72,  84,  78,  83, 173,  13,
+     16,  59,  81,  74,  75,  88,  66,  77,  87,  86,  90,  16,
+     17,  91,  18,  32,  18,  92,  93,  17
+];
+
+
+/**
+ * A mapping from physical key id (modifiers have no effect) to key code for
+ * the browser we are on.
+ * @type {Array.<number>}
+ * @private
+ */
+DvorakLayout.idToKeyCode_ = $.browser.mozilla ?
+    DvorakLayout.firefoxIdToKeyCode_ :
+    DvorakLayout.defaultIdToKeyCode_;
 
 
 /**

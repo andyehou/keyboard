@@ -22,7 +22,9 @@ KeyCode.keyCodeToString_ = {
    57: '9',
    48: '0',
   189: '-',
+  173: '-', // Firefox
   187: '=',
+   61: '=', // Firefox
     8: 'Backspace',
 
     9: 'Tab',
@@ -51,6 +53,7 @@ KeyCode.keyCodeToString_ = {
    75: 'k',
    76: 'l',
   186: ';',
+   59: ';', // Firefox
   222: '\'',
    13: 'Enter',
 
@@ -94,7 +97,9 @@ KeyCode.shiftKeyCodeToString_ = {
    57: '(',
    48: ')',
   189: '_',
+  173: '_', // Firefox
   187: '+',
+   61: '+', // Firefox
     8: 'Backspace',
 
     9: 'Tab',
@@ -123,6 +128,7 @@ KeyCode.shiftKeyCodeToString_ = {
    75: 'K',
    76: 'L',
   186: ':',
+   59: ':', // Firefox
   222: '"',
    13: 'Enter',
 
