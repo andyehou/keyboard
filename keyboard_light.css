@@ -18,7 +18,7 @@ body {
   margin-right: auto;
   width: 600px;
   height: 300px;
-  padding: 12px;
+  padding: 1px 12px 0px 12px;
   background: #444;
   background-image: url('patterns/low_contrast_linen_@2X.png');
   background-repeat: repeat;
@@ -30,6 +30,7 @@ body {
   font: 14px "Lucida Console", Monaco, monospace;
   color: #FFFAF0;
   overflow: hidden;
+  line-height: 150%;
 }
 
 #keyboard-container {

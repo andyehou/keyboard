@@ -2,30 +2,20 @@
  * A class for displaying the text that has been typed.
  * @param {number} width The width in pixels of the widget.
  * @param {number} height The height in pixels of the widget.
+ * @param {string=} opt_initialText The initial text to display.
  * @constructor
  */
-TypingView = function(width, height) {
-  /**
-   * The width in pixels of the widget.
-   * @type {number}
-   * @private
-   */
-  this.width_ = width;
-
-  /**
-   * The height in pixels of the widget.
-   * @type {number}
-   * @private
-   */
-  this.height_ = height;
-
-
+TypingView = function(width, height, opt_initialText) {
   /**
    * The element for this widget.
    * @type {Element}
    * @private
    */
-  this.typingElement_ = undefined;
+  this.typingElement_ = document.createElement('pre');
+  this.typingElement_.className = 'typing';
+  this.typingElement_.style.width = this.width_ + 'px';
+  this.typingElement_.style.height = this.height_ + 'px';
+  this.typingElement_.innerHTML = opt_initialText || '';
 };
 
 
@@ -34,15 +24,6 @@ TypingView = function(width, height) {
  * @return {Element} The element for this widget.
  */
 TypingView.prototype.getElement = function() {
-  // Use cached element if already created.
-  if (this.typingElement_) {
-    return this.typingElement_;
-  }
-
-  this.typingElement_ = document.createElement('pre');
-  this.typingElement_.className = 'typing';
-  this.typingElement_.style.width = this.width_ + 'px';
-  this.typingElement_.style.height = this.height_ + 'px';
   return this.typingElement_;
 };
 
