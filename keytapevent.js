@@ -7,7 +7,7 @@
  * @param {number} modifiersMask A bitmask of the modifier keys being pressed.
  * @param {boolean} isPressed True if the key is being pressed, false if it is
  *     being released.
-* @constructor
+ * @constructor
  */
 var KeyTapEvent = function(
     keyboardLayout, keyCode, modifiersMask, isPressed) {
