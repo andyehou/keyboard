@@ -1,24 +1,10 @@
-html {
-  height: 100%;
-  margin: 0px;
-}
-
 body {
   background: black;
   background-image: url('patterns/hexabump_@2X.png');
   background-repeat: repeat;
-  height: 100%;
-  margin: 0px;
 }
 
 #typing-container {
-  position: relative;
-  top: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 600px;
-  height: 300px;
-  padding: 1px 12px 0px 12px;
   background: white;
   background-image: url('patterns/striped_lens_@2X.png');
   background-repeat: repeat;
@@ -27,20 +13,10 @@ body {
 }
 
 .typing {
-  font: 14px "Lucida Console", Monaco, monospace;
   color: #190030;
-  overflow: hidden;
-  line-height: 150%;
 }
 
 #keyboard-container {
-  position: relative;
-  top: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 600px;
-  height: 200px;
-  padding: 12px;
   background: white;
   background-image: url('patterns/striped_lens_@2X.png');
   background-repeat: repeat;
@@ -48,25 +24,10 @@ body {
   border-radius: 4px;
 }
 
-.keyboard {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.row {
-  position: absolute;
-}
-
 .key {
   background: #190030;
-  position: absolute;
   border: 1px solid #CCC;
   box-shadow: inset 0px 0px 2px 2px #668;
-  -webkit-transition: 250ms;
-  -moz-transition: 250ms;
 }
 
 .key.pressed {
@@ -75,30 +36,9 @@ body {
 }
 
 .key>.label {
-  font: 10px "Lucida Console", Monaco, monospace;
   color: #8A2BE2;
-  text-align: center;
-  padding-top: 13px;
-}
-
-.key:first-child>.label {
-  text-align: left;
-  padding-left: 4px;
-}
-
-.key:last-child>.label {
-  text-align: right;
-  padding-right: 4px;
 }
 
 .key.pressed>.label {
-  font-size: 10px;
   color: #A537F0;
-  font-weight: bold;
-}
-
-#options-container {
-  position: absolute;
-  bottom: 4px;
-  right: 8px;
 }

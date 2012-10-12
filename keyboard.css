@@ -1,0 +1,90 @@
+html {
+  height: 100%;
+  margin: 0px;
+}
+
+body {
+  height: 100%;
+  margin: 0px;
+  -webkit-transition: 250ms;
+  -moz-transition: 250ms;
+}
+
+#typing-container {
+  position: relative;
+  top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+  height: 300px;
+  padding: 1px 12px 0px 12px;
+  -webkit-transition: 250ms;
+  -moz-transition: 250ms;
+}
+
+.typing {
+  font: 14px "Lucida Console", Monaco, monospace;
+  overflow: hidden;
+  line-height: 150%;
+  -webkit-transition: 250ms;
+  -moz-transition: 250ms;
+}
+
+#keyboard-container {
+  position: relative;
+  top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+  height: 200px;
+  padding: 12px;
+  -webkit-transition: 250ms;
+  -moz-transition: 250ms;
+}
+
+.keyboard {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+  position: absolute;
+}
+
+.key {
+  position: absolute;
+  -webkit-transition: 250ms;
+  -moz-transition: 250ms;
+}
+
+.key>.label {
+  font: 10px "Lucida Console", Monaco, monospace;
+  text-align: center;
+  padding-top: 13px;
+  -webkit-transition: 250ms;
+  -moz-transition: 250ms;
+}
+
+.key:first-child>.label {
+  text-align: left;
+  padding-left: 4px;
+}
+
+.key:last-child>.label {
+  text-align: right;
+  padding-right: 4px;
+}
+
+.key.pressed>.label {
+  font-size: 10px;
+  font-weight: bold;
+}
+
+#options-container {
+  position: absolute;
+  bottom: 4px;
+  right: 8px;
+}
